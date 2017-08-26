@@ -14,7 +14,7 @@ $.getJSON(skatespots_phl, function(data) {
     });
 
 
-var megabus_stops = "https://gist.githubusercontent.com/nwebz/2e050439c90971f6b9d0774b7dcd5179/raw/1db13038ee345e55e65e92a2d677e0b645a77c28/map.geojson"
+var megabus_stops = "https://gist.githubusercontent.com/nwebz/2e050439c90971f6b9d0774b7dcd5179/raw/ebecbdd8d116abb15662023fbd34265e55ca64c2/map.geojson"
 
 $.getJSON(megabus_stops, function(data) {
    L.geoJson(data).addTo(mymap); 
