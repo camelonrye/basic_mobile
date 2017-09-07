@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([39.952320, -75.164123], 15);
+var mymap = L.map('mapid').setView([40.7128, -74.0059], 15);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -7,7 +7,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoibndlYnoiLCJhIjoiY2lsc3NvMWI4MDA2MHUwa3NhZ2xvejJqdiJ9.3aR1Ye5KYmMMGgrUeBvYkw'
 }).addTo(mymap);
 
-var skatespots_phl = "https://gist.githubusercontent.com/nwebz/cfd639436c6f4bbbb27f1935ff3adc09/raw/da9fb6e963588b3568c31daf150268713a96d7ee/map.geojson"
+var skatespots_phl = "https://gist.githubusercontent.com/nwebz/5370e3e5afaf0e35b616ee1a5056f9ba/raw/5d691b7aa0f487c67f9e50d1cfdfeaac1e50f020/map.geojson"
 
 $.getJSON(skatespots_phl, function(data) {
    L.geoJson(data).addTo(mymap); 
