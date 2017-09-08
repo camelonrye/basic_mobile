@@ -23,4 +23,8 @@ L.marker([40.74652, -73.993835],{
   icon: megabusIcon
 }).addTo(mymap);
 
+L.marker([40.756174, -74.003055],{
+  icon: megabusIcon
+}).addTo(mymap)
+
 L.control.locate().addTo(mymap);
