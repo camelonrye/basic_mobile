@@ -10,14 +10,17 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var skatespots_phl = "https://gist.githubusercontent.com/nwebz/5370e3e5afaf0e35b616ee1a5056f9ba/raw/5d691b7aa0f487c67f9e50d1cfdfeaac1e50f020/map.geojson"
 
 $.getJSON(skatespots_phl, function(data) {
-   L.geoJson(data).addTo(mymap); 
-    });
+  L.geoJson(data).addTo(mymap);
+});
 
 
-var megabus_stops = "https://gist.githubusercontent.com/nwebz/2e050439c90971f6b9d0774b7dcd5179/raw/ebecbdd8d116abb15662023fbd34265e55ca64c2/map.geojson"
+var megabusIcon = L.icon({
+  iconUrl: 'src/lib/css/bus_marker.png',
+  iconSize: [60,50]
+});
 
-$.getJSON(megabus_stops, function(data) {
-   L.geoJson(data).addTo(mymap); 
-    });
+L.marker([40.74652, -73.993835],{
+  icon: megabusIcon
+}).addTo(mymap);
 
 L.control.locate().addTo(mymap);
